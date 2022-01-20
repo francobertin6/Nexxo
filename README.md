@@ -1,2 +1,1 @@
-Alumno : Franco Bertin
-Comision : 24400
+trabajo nexxo
