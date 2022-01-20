@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#NavBar{
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: fit-content;
+
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+   box-shadow: 0 0 4px 0; 
+}
+
+/* estilos del div de arriba */
+
+#NavBar .div1{
+    width: 100vw;
+    height: 10vh;
+
+    border-bottom: 1px solid rgb(196, 191, 191);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* estilos iconos */
+
+#NavBar .div1 .icon_img{
+    position: relative;
+    left: -5vw;
+    top: 0;
+    
+    width: 25vw;
+    height: 10vh;
+}
+
+#NavBar .div1 .icon_img img{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+
+    transform: translate(-50%, -50%);
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+#NavBar .div1 .icon_img h1{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+
+    font-size: 1.5vw;
+
+    transform: translate(-35%, -50%);
+}
+
+/* estilos search y button_search */
+
+#NavBar .div1 #div_search{
+    width: 15vw;
+    height: 10vh;
+
+    position: relative;
+    left: -18vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+#NavBar .div1 #div_search #search{
+    width: 10vw;
+    height: 5vh;
+
+    position: absolute;
+    top: 50%;
+    left: 1px;
+
+    transform: translate(0, -50%);
+}
+
+#NavBar .div1 #div_search #search_btn{
+    width: 4vw;
+    height: 5vh;
+
+    position: absolute;
+    top: 50%;
+    left: 10vw;
+
+    transform: translate(0, -50%);
+}
+
+/* estilos join_btn */
+
+#NavBar .div1 #Join_btn{
+    position: relative;
+    left: 0;
+    top: 50%;
+
+    transform: translate(0, -50%);
+
+    height: 5vh;
+    width: 4vw;
+}
+
+/* estilos div de parrafos */
+
+#NavBar .div1 .paragraphs_container{
+    width: max-content;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    top: 50%;
+    left: 7vw;
+
+    transform: translate(0, -50%);
+}
+
+#NavBar .div1 .paragraphs_container h3{
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+
+#NavBar .div1 .paragraphs_container #Login_btn:hover{
+    color: rgb(194, 14, 14);
+}
+
+
+/* estilos del div de abajo */
+
+#NavBar .div2{
+    width: 100vw;
+    height: max-content;
+
+    border-bottom: 2px solid rgb(0, 0, 0);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#NavBar .div2 li{
+    width: 16.5vw;
+    height: 5vh;
+
+    text-align: center;
+    font-size: larger;
+    list-style: none;
+    padding-top: 2vh;
+}
+
+#NavBar .div2 li:hover{
+    box-shadow: 2px 2px 2px 2px ;
+}
+
