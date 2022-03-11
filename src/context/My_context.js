@@ -12,14 +12,16 @@ const Provider_component = ({children}) => {
 
     const [Item, setItem] = useState([]);
     const [Duplicated_item, setDuplicated_item] = useState(false)
-    const [Quantity, setQuantity] = useState([]);
-    const [Categories, setCategories] = useState(["Grafica y diseño", "Programacion", "Video y animacion", "Musica y audio", "Negocios", "Escritura"])
+    const [Categories] = useState(["Grafica y diseño", "Programacion", "Video y animacion", "Musica y audio", "Negocios", "Escritura"])
+    const [TotalAmount, setTotalAmount] = useState();
+    const [HeaderToggle, setHeaderToggle] = useState(true);
+    const [Profile_Dropdown, setProfile_Dropdown] = useState(false);
+    const [User_Data, setUser_Data] = useState({});
 
     const Ask_for_Item = (item) => {
 
         let find_element = Item.find( element => element.id === item.id);
-        console.log(find_element);
-
+        
         if(find_element === undefined){
             setDuplicated_item(false)
             setItem([...Item, item]);
@@ -29,9 +31,8 @@ const Provider_component = ({children}) => {
         }       
     }
 
-    const Ask_for_Quantity = (quantity) => {
-
-        setQuantity([...Quantity, quantity]);
+    const Ask_for_TotalAmount = (Amount) => {
+        setTotalAmount(Amount);
     }
 
     const isInCart = (id) => {
@@ -44,32 +45,53 @@ const Provider_component = ({children}) => {
         }
     }
 
-    const Remove_Item = (id, quantity) => {
+    const Remove_Item = (id) => {
 
         let new_array_items = [];
-        let new_array_quantity = [];
-
-        console.log(id)
 
         let filter_element = Item.filter( element => element.id !== id);
-        let filter_quantity = Quantity.filter ( element => element !== quantity);
-
+        
         new_array_items = filter_element;
-        new_array_quantity = filter_quantity;
         
         setItem(new_array_items);
-        setQuantity(new_array_quantity);
+        
     }
 
     const Delete_all = () => {
         setItem([])
     }
 
-    const ContextValue = {Item, Quantity, Categories, Duplicated_item, Ask_for_Item, Ask_for_Quantity, isInCart, Remove_Item, Delete_all}
+    const Ask_for_toggleHeader = (value) => {
+        setHeaderToggle(value)
+    }
 
-   
-    console.log(Quantity)
-    
+    const Ask_for_Profile_Dropdown = (value) => {
+        setProfile_Dropdown(value);
+    }
+
+    const Ask_UserInfo = (data) => {
+
+        setUser_Data(data)
+
+    }
+
+    const ContextValue = {
+        Item, 
+        Categories, 
+        Duplicated_item, 
+        Ask_for_Item, 
+        isInCart, 
+        Remove_Item, 
+        Delete_all,
+        TotalAmount,
+        Ask_for_TotalAmount,
+        HeaderToggle,
+        Ask_for_toggleHeader,
+        Profile_Dropdown,
+        Ask_for_Profile_Dropdown,
+        User_Data,
+        Ask_UserInfo
+        }
 
     return(
         <Provider value={ContextValue}>
@@ -77,6 +99,7 @@ const Provider_component = ({children}) => {
         </Provider>
     )
 } 
+
 
 export default Provider_component;
 

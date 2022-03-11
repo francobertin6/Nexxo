@@ -1,24 +1,32 @@
-// import react-router
-
+// import react-router/react
+import { useEffect } from "react";
 import { BrowserRouter} from "react-router-dom";
 
-// import NavBar
+// import Header
 
-import NavBar from "./Components/NavBar/NavBar";
+import Header from "./Components/Header/Header"
 
 // import Main
 
 import Main from "./Components/Main/Main";
 
+// import Profile_dropdown
+
+import Profile_dropdown from "./Components/Profile_dropdown/Profile_dropdown";
+
 // import contexto
+
 import Provider_component from "./context/My_context";
 
+
 const App = () => {
+
     return(
         <BrowserRouter>
-            <NavBar />
             <Provider_component>
+                <Header />
                 <Main />
+                <Profile_dropdown />
             </Provider_component> 
         </BrowserRouter>
        
@@ -26,3 +34,10 @@ const App = () => {
 }
 
 export default App;
+
+
+
+// setDoc para importar los productos a la base de datos
+
+
+

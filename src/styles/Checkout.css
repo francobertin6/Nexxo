@@ -1,0 +1,152 @@
+
+/* checkout container */
+
+#Checkout{
+    width: 100vw;
+    min-height: 150vh;
+    height: max-content;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    padding-bottom: 10vh;
+}
+
+
+/* detalles de compra */
+#Checkout .items_details{
+    width: 100vw;
+    height: max-content;
+
+    position: relative;
+    left: 0;
+    top: 10vh;
+
+    margin-bottom: 10vh;
+}
+
+#Checkout .items_details h1{
+    font-size: 30px;
+    width: max-content;
+    text-decoration: underline;
+
+    position: relative;
+    left: 10vw;
+    margin-bottom: 5vh;
+}
+
+#Checkout .items_details .items{
+    height: 10vh;
+    width: 80vw;
+
+    position: relative;
+    left: 10vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    box-shadow: 2px 2px 2px 2px;
+    margin-bottom: 1vh;
+}
+
+#Checkout .items_details .items img{
+    width: 8vw;
+    height: 10vh;
+}
+
+#Checkout .items_details .items h1{
+    font-size: 25px;
+
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    transform: translate(0, -25%);
+}
+
+#Checkout .items_details .items p{
+    font-size: 20px;
+
+    position: absolute;
+    left: 15%;
+    top: 75%;
+    transform: translate(0, -75%);
+}
+
+#Checkout .items_details .items button{
+    width: 2.5vw;
+    height: 5vh;
+
+    background-color: rgb(209, 66, 66);
+    font-size: 15px;
+
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/* datos de usuario */
+#Checkout .User_data{
+    width: 100vw;
+    height: 50vh;
+
+    position: relative;
+    left: 0;
+    top: 0vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 10vh;
+}
+
+#Checkout .User_data h1{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#Checkout .User_data input{
+    width: 30vw;
+    height: 4vh;
+}
+
+/* confirmar compra */
+
+#Checkout .confirm_buy{
+    width: 100vw;
+    height: max-content;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#Checkout .confirm_buy p{
+    font-size: 25px;
+    
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    
+}
+
+#Checkout .confirm_buy button{
+    width: 50vw;
+    height: 10vh;
+
+    color: rgb(27, 177, 27);
+    font-size: 25px;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+#Checkout .confirm_buy .return_cart{
+    width: 50vw;
+    height: 5vh;
+    font-size: 25px;
+    color: black;
+}

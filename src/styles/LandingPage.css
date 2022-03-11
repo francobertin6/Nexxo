@@ -1,0 +1,156 @@
+
+/* container de todo el landing page */
+#Landing_container{
+    width: 100vw;
+    height: max-content;
+
+    position: relative;
+}
+
+/* container del primer bloque del landing page */
+#Landing_container #Search_container{
+    width: 100vw;
+    height: 90vh;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    border-bottom: 2px solid black;
+    background-color: rgb(88, 88, 165);
+}
+
+#Landing_container #Search_container #options_container{
+    width: 100vw;
+    height: 12vh;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* div que contiene el logo */
+#Landing_container #Search_container #options_container .logo{
+    width: 10vw;
+    height: max-content;
+
+    position: absolute;
+    left: 5vw;
+    top: 50%;
+
+    transform: translate(0, -50%);
+}
+
+#Landing_container #Search_container #options_container .logo img{
+    width: 50px;
+    height: 50px;
+}
+
+/* div con las diferentes opciones */
+
+#Landing_container #Search_container #options_container .options{
+    width: 25vw;
+
+    position: absolute;
+    left: 72%;
+    top: 50%;
+    transform: translate(0, -50%);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#Landing_container #Search_container #options_container .options button{
+    border: transparent;
+    background-color: transparent;
+
+    font-size: 18px;
+}
+
+#Landing_container #Search_container #options_container .options .Join_btn{
+    border: 2px solid black;
+    background-color: deepskyblue;
+
+    width: 5vw;
+    height: 3vh;
+}
+
+
+/* div con la barra de busqueda y el mensaje de bienvenida */
+
+#Landing_container #Search_container .welcome_title{
+
+    width: 50vw;
+    height: 50vh;
+
+    position: relative;
+    top: 50%;
+    left: 5vw;
+
+    transform: translate(0, -50%);
+
+}
+
+#Landing_container #Search_container .welcome_title h1{
+
+    width: 50vw;
+    height: 25vh;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    font-size: 40px;
+}
+
+#Landing_container #Search_container .welcome_title input{
+    
+    width: 40vw;
+    height: 5vh;
+
+    position: absolute;
+    top: 15vh;
+    left: 0;
+}
+
+#Landing_container #Search_container .welcome_title button{
+
+    width: 5vw;
+    height: 5.4vh;
+
+    position: absolute;
+    top: 15vh;
+    left: 40vw;
+}
+
+#Landing_container #Search_container .welcome_title .tags{
+
+    width: 50vw;
+    height: 5vh;
+
+    position: absolute;
+    top: 22vh;
+    left: 0;
+}
+
+
+/* IMG de Search_container */
+
+#Landing_container #Search_container .Search_container_img{
+
+    width: 25vw;
+    height: 60vh;
+
+    position: absolute;
+    left: 65%;
+    top: 50%;
+
+    transform: translate(0, -50%);
+}

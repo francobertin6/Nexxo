@@ -9,7 +9,6 @@ const ItemList = ({items}) => {
 
     const [Category, setCategory] = useState("");
 
-
     const category_value = (value) => {
         setCategory(value)
     }

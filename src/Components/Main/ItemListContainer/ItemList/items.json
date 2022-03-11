@@ -1,0 +1,25 @@
+{
+    "items" : [
+        {
+            "id": 1,
+            "title" : "ejemplo_titulo",
+            "description" : "ejemplo_descripcion",
+            "price" : 25,
+            "pictureUrl" : "https://okdiario.com/img/vida-sana/2016/06/30/sandia.jpg"
+        },
+        {
+            "id": 1,
+            "title" : "ejemplo_titulo",
+            "description" : "ejemplo_descripcion",
+            "price" : 25,
+            "pictureUrl" : "https://okdiario.com/img/vida-sana/2016/06/30/sandia.jpg"
+        },
+        {
+            "id": 1,
+            "title" : "ejemplo_titulo",
+            "description" : "ejemplo_descripcion",
+            "price" : 25,
+            "pictureUrl" : "https://okdiario.com/img/vida-sana/2016/06/30/sandia.jpg"
+        }
+    ]
+}

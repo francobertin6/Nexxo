@@ -1,0 +1,159 @@
+#Profile_Dropdown{
+    position: absolute;
+    width: 15vw;
+    height: 40vh;
+
+    top: 8vh;
+    left: 80vw;
+
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 2px 1px 1px;
+
+    z-index: 2;
+}
+
+/* account */
+
+#Profile_Dropdown .account{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 15vw;
+    height: 15vh;
+}
+
+#Profile_Dropdown .account button{
+    position: absolute;
+    top: 4vh;
+    left: 2vw;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-color: 1px solid black;
+}
+
+#Profile_Dropdown .account h3{
+    position: absolute;
+    top: 3vh;
+    left: 6vw;
+
+    width: 10vw;
+    height: 5vh;
+
+    font-size: 25px;
+}
+
+#Profile_Dropdown .account h6{
+    position: absolute;
+    top: 7vh;
+    left: 6vw;
+
+    width: 10vw;
+    height: 2.5vh;
+
+    font-size: 15px;
+}
+
+#Profile_Dropdown .account .become_seller{
+    position: absolute;
+    top: 10vh;
+    left: 1vw;
+
+    width: 15vw;
+    height: 5vh;
+
+    background-color: transparent;
+    border: transparent;
+
+    color: rgb(88, 88, 165);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* profile_div1 */
+
+#Profile_Dropdown .profile_div1{
+    position: relative;
+
+    left: 1vw;
+    
+    width: 13vw;
+    height: 12.5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#Profile_Dropdown .profile_div1 li{
+    height: 4vh;
+    width: 15vw;
+
+    text-align: center;
+    list-style: none;
+}
+
+#Profile_Dropdown .profile_div1 li:hover{
+    box-shadow: 1px 1px 2px 2px;
+}
+
+#Profile_Dropdown .profile_div1 li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+
+    position: relative;
+    top: 20%;
+    transform: translate(-50%);
+}
+
+/* profile_div2 */
+
+#Profile_Dropdown .profile_div2{
+    position: relative;
+
+    left: 1vw;
+    
+    width: 13vw;
+    height: 12.5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#Profile_Dropdown .profile_div2 li{
+    height: 4vh;
+    width: 15vw;
+
+    text-align: center;
+    list-style: none;
+}
+
+#Profile_Dropdown .profile_div2 li:hover{
+    box-shadow: 1px 1px 2px 2px;
+}
+
+#Profile_Dropdown .profile_div2 li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+
+    position: relative;
+    top: 20%;
+    transform: translate(-50%);
+}

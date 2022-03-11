@@ -1,9 +1,9 @@
 
 // import ItemCount
-import ItemCount from "../ItemCount/ItemCount";
+import ItemOptions from "../ItemOptions/ItemOptions"
 
 // import react/contexto
-import { useState, useContext } from "react";
+import { useContext } from "react";
 
 import { My_Context } from "../../../../context/My_context";
 
@@ -17,14 +17,10 @@ const ItemDetail = ({item, id}) => {
 
     const contexto = useContext(My_Context);
 
-    const { Ask_for_Quantity, Ask_for_Item } = contexto;
+    const { Ask_for_Item } = contexto;
 
 
-    const [Count, SetCount] = useState();
-
-    const onAdd = (value) => {
-
-        Ask_for_Quantity(value);
+    const onAdd = () => {
         Ask_for_Item(item)
     }
 
@@ -56,18 +52,23 @@ const ItemDetail = ({item, id}) => {
             </div>
 
             <div className="description">
+
+                <div className="description_title">
+                    <p>Descripcion</p>
+                    <div></div>
+                </div>
+
                 <p>{description}</p>
+
             </div> 
                  
             <img src={pictureUrl} alt="imagen" />
 
-            
-
             <div className="Options">
 
-                <p className="price">${price}</p>
+                <p className="price">$ {price}</p>
 
-                <ItemCount name="Agregar a carrito" stock={10} initial={0} onAdd={ onAdd } notification= { Notifications } id={id}
+                <ItemOptions name="Agregar a carrito" onAdd={ onAdd } notification= { Notifications } id={id}
                 />
 
             </div>

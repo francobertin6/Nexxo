@@ -1,0 +1,185 @@
+/* container itemlist */
+
+#itemListContainer{
+    width: 90vw;
+    height: max-content;
+
+    position: relative;
+    top: 15vh;
+    left: 50%;
+
+    transform: translate(-50%);
+}
+
+/* container de items */
+
+#item_container{
+    position: relative;
+    top: 15%;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 90vw;
+    height: 50vh;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    overflow: hidden;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+}
+
+#item_container .category{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 5vh;
+    
+}
+
+/* componente Item.js */
+
+.item_div{
+    width: 15vw;
+    height: 40vh;
+
+    position: relative;
+    top: 5vh;
+    
+
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+
+    box-shadow: 1px 1px 3px 0px;
+}
+
+/* usuario de cada item */
+
+.item_div .user{
+    width: 15vw;
+    height: 2.5vh;
+
+    position: relative;
+    top: 18vh;
+}
+
+.item_div .user p{
+    position: absolute;
+    left: 4vw;
+    top: 70%;
+    font-size: 18px;
+}
+
+.item_div .user .profile_img{
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    position: absolute;
+    left: 1vw;
+    top: 50%;
+}
+
+
+/* titulo de cada item */
+
+.item_div .title{
+    width: 15vw;
+    height: 2.5vh;
+
+    text-align: center;
+
+    position: relative;
+    top: 23vh;
+}
+
+.item_div .title h6{
+    transform: translate(0 , -50%);
+
+    font-size: 21px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+/* estrellas de usuario en item */
+
+.item_div .stars{
+    width: 15vw;
+    height: 2.5vh;
+
+    position: relative;
+    top: 25vh;
+}
+
+.item_div .stars p{
+    font-size: 2vh;
+    position: absolute;
+    left: 2.5vw;
+    top: 50%;
+    font-size: 20px;
+
+    color: rgb(248, 160, 78);
+}
+
+.item_div .stars img{
+    height: 20px;
+    width: 20px;
+
+    position: absolute;
+    left: 1vw;
+    top: 50%;
+}
+
+
+/* imagen de los items */
+
+.item_div img{
+    width: 15vw;
+    height: 18vh;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+}
+
+/* precio de item */
+
+.item_div .price{
+    width: 15vw;
+    height: 5vh;
+
+    border-top: 2px solid black;
+    position: relative;
+    top: 28vh;
+
+}
+
+.item_div .price p{
+    position: absolute;
+    top: 50%;
+    left: 65%;
+
+    transform: translate(0, -50%);
+
+    font-size: 15px;
+}
+
+.item_div .price img{
+    position: absolute;
+    left: 1vw;
+    top: 50%;
+
+    transform: translate(0, -50%);
+
+    height: 20px;
+    width: 20px;
+}

@@ -1,0 +1,118 @@
+/* DIV LOGIN/REGISTER */
+
+#Login_register{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    
+    width: 20%;
+    height: max-content;
+    background: white;
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    border-radius: 5px 5px 5px 5px;
+}
+
+#Login_register div{
+    width: 100%;
+    height: 15vh;
+}
+
+#Login_register div button{
+    width: 75%;
+    height: 5vh;
+
+    margin: 0;
+}
+
+#Login_register div input{
+    width: 75%;
+    height: 3vh;
+}
+
+/* titulo */
+#Login_register #login_title h1{
+    width: 100%;
+    height: max-content;
+
+    text-align: center;
+    position: relative;
+    top: 25%;
+}
+
+/* botones de redes sociales */
+#Login_register #social_logs button{
+    position: relative;
+    left: 50%;
+
+    transform: translate(-50%);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#Login_register #social_logs #facebookBtn{
+    background-color: rgb(54, 67, 253);
+    color: white;
+}
+
+#Login_register #social_logs #googleBtn{
+    background-color: rgb(236, 65, 65);
+    color: white;
+}
+
+/* inputs */
+
+#Login_register #login_inputs{
+    height: max-content;
+}
+
+#Login_register #login_inputs input{
+    position: relative;
+    left: 50%;
+
+    transform: translate(-50%);
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+#Login_register #login_inputs button{
+    position: relative;
+    left: 50%;
+
+    transform: translate(-50%);
+    margin-bottom: 2.5vh;
+}
+
+/* footer */
+#Login_register #login_footer{
+    height: 5vh;
+    border-top: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#Login_register #login_footer p{
+    font-size: 18px;
+}
+
+#Login_register #login_footer #logIn{
+    background: transparent;
+    font-size: 18px;
+    width: fit-content;
+    height: fit-content;
+
+    border: transparent;
+}
+
+

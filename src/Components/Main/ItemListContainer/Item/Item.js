@@ -64,7 +64,7 @@ const Item = ({items, category_value}) => {
 
                 <img src={like1} alt="like" />
 
-                <p>A partir de ${price}</p>
+                <p>A partir de $ {price}</p>
             </div>
 
         </div>

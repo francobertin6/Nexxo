@@ -1,0 +1,96 @@
+/* componente ItemDetail */
+
+#ItemDetail{
+    width: 90vw;
+    height: max-content;
+    
+    position: relative;
+    top: 15vh;
+    left: 50%;
+
+    transform: translate(-50%);
+}
+
+/* title de ItemDetail */
+
+#ItemDetail .title{
+    width: 45vw;
+    height: max-content;
+
+    position: absolute;
+    top: 0;
+    left: 5vh;
+
+    font-size: 25px;
+}
+
+/* img de itemDetail */
+
+#ItemDetail img{
+    width: 45vw;
+    height: 45vh;
+
+    box-shadow: 2px 2px 3px 0;
+    position: absolute;
+    top: 10vh;
+    left: 5vh;
+    
+
+}
+
+/* descripcion de itemDetail */
+
+#ItemDetail .description{
+    width: 45vw;
+    height: max-content;
+
+    position: absolute;
+    top: 60vh;
+    left: 5vh;
+}
+
+#ItemDetail .description_title{
+    width: 80vw;
+    font-size: 21px;
+    margin-bottom: 2.5vh;
+}
+
+#ItemDetail .description_title div{
+    width: inherit;
+    height: 0.5vh;
+    background-color: red;
+}
+
+
+#ItemDetail .description p{
+    width: 45vw;
+    height: max-content;
+
+}
+
+/* price de itemDetail */
+
+
+#ItemDetail .Options{
+    width: 25vw;
+    height: 45vh;
+    
+    border: 1px solid black;
+
+    position: relative;
+    left: 70%;
+    top: 10vh;
+}
+
+#ItemDetail .Options .price{
+    width: fit-content;
+    height: fit-content;
+
+    position: absolute;
+    left: 90%;
+    top: 10%;
+
+    transform: translate(-50%);
+
+    font-size: 25px;
+}
