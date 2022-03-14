@@ -12,7 +12,7 @@ import Main from "./Components/Main/Main";
 
 // import Profile_dropdown
 
-import Profile_dropdown from "./Components/Profile_dropdown/Profile_dropdown";
+import Profile_dropdown from "./Components/Main/Profile/Profile_dropdown/Profile_dropdown";
 
 // import contexto
 

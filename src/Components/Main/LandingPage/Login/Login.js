@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 // import contexto
 import { My_Context } from "../../../../context/My_context";
 import { useContext } from "react";
+import { async } from "@firebase/util";
 
 const LogIn = ({Register_change}) => {
 
@@ -55,6 +56,8 @@ const LogIn = ({Register_change}) => {
     // registra un usuario con el boton #reg_btns solo si todos los datos estan completos
     const Register_user = async() => {
 
+        console.log(DataReg)
+
         if(DataReg !== undefined){
 
             console.log(DataReg)
@@ -67,8 +70,48 @@ const LogIn = ({Register_change}) => {
                 'Content-Type': 'application/json',
                 // 'Content-Type': 'application/x-www-form-urlencoded',
               },
-            }).then( res => {
-                console.log(res);
+            }).then( async (res) => {
+
+                console.log(res.status);
+
+                    // necesito registrarme y con el password elejir el usuario traer el id y con eso generar un perfil
+                    
+                    let password = await res.json().then(res => {
+                        return res.Password;
+                    });
+
+                    console.log(password);
+
+
+                        await fetch("http://127.0.0.1:3500/user/Get_user/" + password)
+                        .then( async (res) => {
+
+                            let Id = await res.json().then(res => {return(res.Id)});
+                            console.log(Id);
+
+                            res.json().then( res => {
+                                    console.log(res);
+                                    Ask_UserInfo(res);
+                            });
+
+                            await fetch("http://127.0.0.1:3500/profile/createProfile", {
+                                method: 'POST',
+                                mode: "cors",
+                                body: JSON.stringify({
+                                    "User_Id": Id
+                                }),
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                                }
+                                }).then( res => {
+                                    console.log(res);
+                                })
+                        })
+
+                    Navigate("/index");
+                    Ask_for_toggleHeader(true);
+
             })
         }else{
             console.log("estan mal los datos")
@@ -121,11 +164,15 @@ const LogIn = ({Register_change}) => {
                 'Content-Type': 'application/json',
                 // 'Content-Type': 'application/x-www-form-urlencoded',
               },
-        }).then( res => {
 
-            if(res.status === 200){
-                Navigate("/index");
-                Ask_for_toggleHeader(true);
+        }).then( async (res) => {
+
+            let password = await res.json().then(res => {
+                return res.Password;
+            });
+
+            await fetch("http://127.0.0.1:3500/user/Get_user/" + password)
+            .then( res => {
 
                 // intento de que la promesa me devuelva los datos del usuario
                 res.json().then( res => {
@@ -133,9 +180,10 @@ const LogIn = ({Register_change}) => {
                     Ask_UserInfo(res);
                 });
 
-            }else{
-                return null
-            }
+                Navigate("/index");
+                Ask_for_toggleHeader(true);
+
+            }); 
 
         }).catch( err => {
             console.log(err);
@@ -143,8 +191,7 @@ const LogIn = ({Register_change}) => {
         
         }else{
             
-            console.log("datos incompletos")
-
+            console.log("datos incompletos");
         }
 
     }

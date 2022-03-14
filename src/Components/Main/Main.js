@@ -25,7 +25,7 @@ import LandingPage from "./LandingPage/LandingPage";
 
 // import Profile
 
-import Profile from "./Profile/Profile";
+import ProfileContainer from "./Profile/ProfileContainer";
 
 
 
@@ -40,7 +40,7 @@ const Main = () => {
                 <Route path= "/cart/:orders" element = {<Cart />}/>
                 <Route path= "/checkout" element = {<Checkout />}/>
                 <Route path= "/" element = {<LandingPage />}/>
-                <Route path= "/profile" element = {<Profile />} />
+                <Route path= "/profile" element = {<ProfileContainer />} />
             </Routes>
 
         </main>
