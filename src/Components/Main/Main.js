@@ -1,7 +1,10 @@
 
 // react-router
 
-import { Routes, Route} from "react-router-dom";
+// import { Routes, Route, useLocation} from "react-router-dom";
+
+import { useParams } from "react-router-dom";
+
 
 // import ItemListContainer
 
@@ -19,32 +22,75 @@ import Cart from "./Cart/Cart";
 
 import Checkout from "./Checkout/Checkout";
 
-// import Landing page
-
-import LandingPage from "./LandingPage/LandingPage";
-
 // import Profile
 
 import ProfileContainer from "./Profile/ProfileContainer";
 
+// import header
+
+import Header from "./Header/Header";
+
 
 
 const Main = () => {
-    return(
-        <main id="conteiner_main">
-            <Routes>
-                <Route path= "/item/:id" element= {<ItemDetailContainer />} />
-                <Route path= "/index/:category" element={<ItemListContainer />}/>
-                <Route path= "/index" element = {<ItemListContainer />}/>
-                <Route path= "/cart" element = {<Cart />}/>
-                <Route path= "/cart/:orders" element = {<Cart />}/>
-                <Route path= "/checkout" element = {<Checkout />}/>
-                <Route path= "/" element = {<LandingPage />}/>
-                <Route path= "/profile" element = {<ProfileContainer />} />
-            </Routes>
 
+    return(
+
+        <main id="conteiner_main">
+            <Header />
+            <Return_a_child />
         </main>
+
     )
+    
+}
+
+
+const Return_a_child = () => {
+
+    const {Params} = useParams();
+
+
+    if(Params === "index"){
+
+        return(
+            <>
+                <ItemListContainer />
+            </>
+        )
+        }else if(Params === "item"){
+
+        return(
+
+            <>
+                <ItemDetailContainer />
+            </> 
+        )
+        }else if(Params === "cart"){
+
+        return(
+
+            <>
+                <Cart />
+            </>
+        )
+        }else if(Params === "checkout"){
+
+        return(
+
+            <>
+                <Checkout />
+            </>
+        )
+        }else if(Params === "profile"){
+
+        return(
+
+            <>
+                <ProfileContainer />
+            </>
+        )
+        }
 }
 
 export default Main;

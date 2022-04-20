@@ -8,11 +8,13 @@ import db from '../../../Firebase/firebase.js';
 import { collection, addDoc } from "firebase/firestore";
 
 // import react-router
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Checkout = () => {
 
     const contexto = useContext(My_Context);
+
+    let {Params} = useParams();
 
     const { TotalAmount, Item, Remove_Item, Delete_all } = contexto;
     
@@ -92,7 +94,13 @@ const Checkout = () => {
         }
     }
 
-    
+    if(Params !== "checkout"){
+        return(
+            <>
+            </>
+        )
+    }else{
+
     return(
         <section id="Checkout">
 
@@ -107,7 +115,7 @@ const Checkout = () => {
                             <h1>{element.title}</h1>
                             <p>Precio : {element.price}</p>
 
-                            {Item.length <= 1 ? <Link to= "/cart" id="href_element"><button id={idx} onClick={Eliminate_item}>X</button></Link> : <button id={idx} onClick={Eliminate_item}>X</button>}
+                            {Item.length <= 1 ? <Link to= "/main/cart" id="href_element"><button id={idx} onClick={Eliminate_item}>X</button></Link> : <button id={idx} onClick={Eliminate_item}>X</button>}
                         </div>
                     )
                 })}
@@ -128,12 +136,13 @@ const Checkout = () => {
 
             <div className="confirm_buy">
                 <p>Precio total : {TotalAmount}</p>
-                {checkData ? <Link to="/cart/orders"><button onClick={Handle_buy}>Confirmar compra</button></Link> : <button onClick={Handle_buy} disabled>Confirmar compra</button>}
-                <Link to="/cart"><button className="return_cart">Volver a carrito</button></Link>
+                {checkData ? <Link to="/main/cart/orders"><button onClick={Handle_buy}>Confirmar compra</button></Link> : <button onClick={Handle_buy} disabled>Confirmar compra</button>}
+                <Link to="/main/cart"><button className="return_cart">Volver a carrito</button></Link>
             </div>
 
         </section>
-    )
+        )
+    }
 }
 
 export default Checkout;

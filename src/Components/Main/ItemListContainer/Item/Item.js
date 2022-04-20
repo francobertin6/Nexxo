@@ -47,7 +47,7 @@ const Item = ({items, category_value}) => {
             <img src={pictureUrl} alt="imagen"/>
 
             <div className="title">
-                <Link to={"/item/" + id} onClick={Handle_title}>
+                <Link to={"/main/item/" + id} onClick={Handle_title}>
                     <h6>{title}</h6>
                 </Link>
             </div>

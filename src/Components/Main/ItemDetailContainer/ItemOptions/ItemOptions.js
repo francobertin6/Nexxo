@@ -32,7 +32,7 @@ const ItemOptions = ({name, onAdd, notification, id}) => {
 
             <h6>{name}</h6>
         
-            <Link to={Duplicated_item ? "/item/" + id : "/cart"}>
+            <Link to={Duplicated_item ? "/main/item/" + id : "/main/cart"}>
                 <button id="Buy" onClick={Handle_buy}>Comprar</button>
             </Link>
 

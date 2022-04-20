@@ -74,6 +74,11 @@
     text-align: left;
 }
 
+#Profile_Dropdown .account .become_seller:hover{
+    font-size: 16px;
+    font-weight: 650;
+}
+
 /* profile_div1 */
 
 #Profile_Dropdown .profile_div1{

@@ -21,13 +21,20 @@ const ItemDetailContainer = () => {
     const docs = getDocs(collections);
 
     const [ItemDetails, setItemDetails] = useState({});
-    let {id} = useParams();
+    const [loading, setLoading] = useState(true);
+
+    let {secondParams} = useParams();
+    let {Params} = useParams();
+
+    
 
     useEffect( ()=>{
 
         const newArray = []
-        
-           docs.then((res) => {
+
+        setTimeout(() => {   
+
+            docs.then((res) => {
                const doc = res.docs;
 
                doc.map( doc => {
@@ -36,19 +43,42 @@ const ItemDetailContainer = () => {
 
                console.log(newArray)
 
-               let element = newArray.filter( element => element.id === Number(id));
-               console.log(element);
+               let element = newArray.filter( element => element.id === Number(secondParams));
+               
 
-               setItemDetails(element[0])
+               setItemDetails(element[0])  
            })
-       
-    }, [id])
 
-    return(
+           
+               setLoading(false)
+           }, 2000);
+       
+    }, [secondParams])
+
+    
+
+    if(loading === true){
+        console.log(loading)
+        return(
         <>
-            <ItemDetail item = {ItemDetails} id={id}/>
+
+        <div class="loader"></div>
+
+        </>
+        )
+    }else if(loading === false && Params !== "item"){
+        return(
+            <>
+            </>
+        )
+    }else{
+        return(
+        <>
+            <ItemDetail item = {ItemDetails} id={secondParams}/>
         </>
     )
+    }
+
 }
 
 export default ItemDetailContainer;

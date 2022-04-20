@@ -37,6 +37,18 @@ import "./styles/LandingPage.css"
 // estilos de Dropdown
 import "./styles/Dropdown.css"
 
+// estilos de Profile
+import "./styles/Profile.css"
+
+// estilos de seller_navbar
+import "./styles/Seller_styles/Seller_navbar.css"
+
+// estilos de seller_dashboard
+import "./styles/Seller_styles/Seller_dashboard.css";
+
+// estilos de seller_side
+import "./styles/Seller_styles/Seller_side.css"
+
 // import estilos de toast
 import 'react-toastify/dist/ReactToastify.css';
 

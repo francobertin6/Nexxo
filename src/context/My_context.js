@@ -2,6 +2,7 @@
 // import react
 import { createContext, useState } from "react";
 
+
 // exporta contexto a hijos
 export const My_Context = createContext()
 
@@ -14,11 +15,10 @@ const Provider_component = ({children}) => {
     const [Duplicated_item, setDuplicated_item] = useState(false)
     const [Categories] = useState(["Grafica y diseño", "Programacion", "Video y animacion", "Musica y audio", "Negocios", "Escritura"])
     const [TotalAmount, setTotalAmount] = useState();
-    const [HeaderToggle, setHeaderToggle] = useState(true);
     const [Profile_Dropdown, setProfile_Dropdown] = useState(false);
-    const [User_Data, setUser_Data] = useState({});
+    const [User_Data, setUser_Data] = useState(JSON.parse(localStorage.getItem('data_user')));
+    const [ProfileData, setProfileData] = useState(JSON.parse(localStorage.getItem('profile_data')));
 
-    
     const Ask_for_Item = (item) => {
 
         let find_element = Item.find( element => element.id === item.id);
@@ -62,10 +62,6 @@ const Provider_component = ({children}) => {
         setItem([])
     }
 
-    const Ask_for_toggleHeader = (value) => {
-        setHeaderToggle(value)
-    }
-
     const Ask_for_Profile_Dropdown = (value) => {
         setProfile_Dropdown(value);
     }
@@ -73,6 +69,12 @@ const Provider_component = ({children}) => {
     const Ask_UserInfo = (data) => {
 
         setUser_Data(data)
+
+    }
+
+    const Ask_ProfileData = (data) => {
+
+        setProfileData(data);
 
     }
 
@@ -86,12 +88,12 @@ const Provider_component = ({children}) => {
         Delete_all,
         TotalAmount,
         Ask_for_TotalAmount,
-        HeaderToggle,
-        Ask_for_toggleHeader,
         Profile_Dropdown,
         Ask_for_Profile_Dropdown,
         User_Data,
-        Ask_UserInfo
+        Ask_UserInfo,
+        Ask_ProfileData,
+        ProfileData
         }
 
     return(

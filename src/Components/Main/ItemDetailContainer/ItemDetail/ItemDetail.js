@@ -32,7 +32,13 @@ const ItemDetail = ({item, id}) => {
         }
     }
 
-    return(
+    if(item === undefined){
+        return(
+            <>
+            </>
+        )
+    }else{
+        return(
         <article id="ItemDetail">
 
             <ToastContainer
@@ -75,6 +81,9 @@ const ItemDetail = ({item, id}) => {
                  
         </article>
     )
+    }
+
+    
 }
 
 export default ItemDetail;

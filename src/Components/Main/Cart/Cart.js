@@ -32,13 +32,14 @@ const Cart = () => {
     const [Orders, setOrders] = useState([]);
     
     // parametro de ordenes para saber si mostrar las ordenes o el carrito
-    const {orders} = useParams();
+    let {Params} = useParams();
+    const {secondParams} = useParams();
 
     useEffect( () => {
 
         let orders_array = []
 
-        if(orders === "orders"){
+        if(secondParams === "orders"){
 
             orders_promise.then( (res) => {
                 let orders = res.docs;
@@ -59,7 +60,7 @@ const Cart = () => {
 
         }
 
-    },[orders])
+    },[secondParams])
 
     const Handle_deleteAll = () => {
         Delete_all();
@@ -89,11 +90,11 @@ const Cart = () => {
     }
 
    
-    if(Item.length !== 0 && orders === undefined){
+    if(Item.length !== 0 && secondParams === undefined && Params === "cart"){
 
     return(
     <>
-        <Link to="/index">
+        <Link to="/main/index">
             <button id="keep_buying">Seguir navegando</button>
         </Link>
         
@@ -101,11 +102,11 @@ const Cart = () => {
 
             <div className="titles">
 
-                <Link to="/cart">
+                <Link to="/main/cart">
                     <h3>Carrito</h3>
                 </Link>
                 
-                <Link to="/cart/orders">
+                <Link to="/main/cart/orders">
                     <h3>Ordenes</h3>
                 </Link>
 
@@ -124,7 +125,7 @@ const Cart = () => {
                 
             <div className="totalAmount">
                 <h1>Precio total : {TotalAmount} </h1>
-                <Link to="/checkout">
+                <Link to="/main/checkout">
                     <button onClick={HandleCheckout}>Seguir con la totalidad de la compra</button>
                 </Link> 
             </div>
@@ -133,10 +134,10 @@ const Cart = () => {
     </>
     ) 
 
-    }else if(Item.length === 0 && orders === undefined){
+    }else if(Item.length === 0 && secondParams === undefined && Params === "cart"){
         return(
             <>
-            <Link to="/index">
+            <Link to="/main/index">
                 <button id="keep_buying">Seguir navegando</button>
             </Link>
             
@@ -144,27 +145,27 @@ const Cart = () => {
     
                 <div className="titles">
 
-                <Link to="/cart">
+                <Link to="/main/cart">
                     <h3>Carrito</h3>
                 </Link>
                 
-                <Link to="/cart/orders">
+                <Link to="/main/cart/orders">
                     <h3>Ordenes</h3>
                 </Link>
 
                     <button onClick={Handle_deleteAll}>Borrar todos los productos</button>
                 </div>
     
-                   <Link to="/"><h1 className="Cart_Message">Lo siento no hay items agregados en carrito</h1></Link>
+                   <Link to="/main/index"><h1 className="Cart_Message">Lo siento no hay items agregados en carrito</h1></Link>
                     
             </section>
         </>
         )
-    }else if(orders === "orders" && Orders.length !== 0){
+    }else if(secondParams === "orders" && Orders.length !== 0 && Params === "cart"){
 
         return(
             <>
-                <Link to="/index">
+                <Link to="/main/index">
                     <button id="keep_buying">Seguir navegando</button>
                 </Link>
                 
@@ -172,11 +173,11 @@ const Cart = () => {
         
                     <div className="titles">
         
-                        <Link to="/cart">
+                        <Link to="/main/cart">
                             <h3>Carrito</h3>
                         </Link>
                         
-                        <Link to="/cart/orders">
+                        <Link to="/main/cart/orders">
                             <h3>Ordenes</h3>
                         </Link>
         
@@ -197,11 +198,11 @@ const Cart = () => {
                 </section>
             </>
             )
-    }else if(orders === "orders" && Orders.length === 0){
+    }else if(secondParams === "orders" && Orders.length === 0 && Params === "cart"){
 
         return(
             <>
-                <Link to="/index">
+                <Link to="/main/index">
                     <button id="keep_buying">Seguir navegando</button>
                 </Link>
                 
@@ -209,21 +210,26 @@ const Cart = () => {
         
                     <div className="titles">
         
-                        <Link to="/cart">
+                        <Link to="/main/cart">
                             <h3>Carrito</h3>
                         </Link>
                         
-                        <Link to="/cart/orders">
+                        <Link to="/main/cart/orders">
                             <h3>Ordenes</h3>
                         </Link>
         
                     </div>
         
-                    <Link to="/cart"><h1 className="Cart_Message">no tienes ordenes de compra</h1></Link>
+                    <Link to="/main/cart"><h1 className="Cart_Message">no tienes ordenes de compra</h1></Link>
                              
                 </section>
             </>
             )
+    }else if(Params !== "cart"){
+        return(
+            <>
+            </>
+        )
     }
 }
 

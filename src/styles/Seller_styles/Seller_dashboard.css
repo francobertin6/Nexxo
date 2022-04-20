@@ -1,0 +1,106 @@
+
+/* Seller_dashboard container */
+
+#Seller_dashboard{
+    position: relative;
+    width: 100vw;
+    height: max-content;
+}
+
+#Seller_dashboard #create_order{
+    position: relative;    
+    width: 100vw;
+    height: 20vh;
+}
+
+#Seller_dashboard #create_order .create_order_btns{
+    width: 70vw;
+    height: 10vh;
+
+    border: 1px solid black;
+
+    position: relative;
+    left: 25vw;
+    top: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* user data */
+
+#Seller_dashboard #create_order .create_order_btns .user_data{
+    position: absolute;
+    left: 2vw;
+    top: 50%;
+
+    transform: translate(0, -50%);
+    
+}
+
+#Seller_dashboard #create_order .create_order_btns .user_data h1{
+    margin-bottom: 1vh;
+    font-size: 1vw;
+}
+
+/* user data */
+
+#Seller_dashboard #create_order .create_order_btns button{
+    width: 50px;
+    height: 50px;
+    
+    position: relative;
+    right: 3vw;
+}
+
+#Seller_dashboard #create_order .create_order_btns button img{
+    width: 15px;
+    height: 15px;
+}
+
+#Seller_dashboard #create_order .create_order_btns #agregate_product{
+    position: relative;
+    right: 4vw;
+
+    width: 9vw;
+    height: 5vh;
+    background-color: rgb(135, 219, 135);
+}
+
+
+/* ratings */
+
+#Seller_dashboard #ratings{
+    position: absolute;
+    left: 2.5vw;
+    top: 5vh;
+
+    width: 20vw;
+    height: 55vh;
+
+    border: 1px solid black;
+}
+
+/* ratings */
+
+/* div de no se que todavia */
+
+#Seller_dashboard #info{
+    position: absolute;
+    left: 25vw;
+    top: 20vh;
+
+    width: 70vw;
+    height: 40vh;
+    border: 1px solid black;
+}
+
+/* div de no se que todavia */
+
+
+
+
+

@@ -1,0 +1,307 @@
+
+/* section del image-background */
+
+#Image-backgroud{
+
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+
+    background-color: rgb(66, 65, 65);
+
+}
+
+#Image-backgroud div{
+
+    position: absolute;
+    left: 79%;
+    top: 80%;
+
+    width: max-content;
+    height: max-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#Image-backgroud div button{
+
+    width: 7vw;
+    height: 3vh;
+
+    font-size: 12px;
+    margin-left: 1vw;
+
+}
+
+#Image-backgroud div button img{
+    width: 1vw;
+    top: 0.5vh;
+}
+
+/* perfile_data */
+
+.perfile_data{
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+}
+
+.perfile_data img{
+    position: absolute;
+    left: 2.5vw;
+    top: -6vh;
+    
+    border-radius: 50%;
+    width: 12vw;
+    height: 21vh;
+}
+
+.perfile_data h1{
+    position: absolute;
+    left: 18vw;
+    top: 1vh;
+
+    font-size: 2vw;
+    height: max-content;
+    width: max-content;
+}
+
+.perfile_data h6{
+    position: absolute;
+    left: 18vw;
+    top: 6vh;
+
+    font-size: 1vw;
+    height: max-content;
+    width: max-content;
+}
+
+/* Description */
+
+.Description{
+    position: relative;
+    width: 50vw;
+    height: 20vh;
+
+}
+
+.Description h3{
+    position: absolute;
+    top: 2vh;
+    left: 5vw;
+
+    font-size: 25px;
+    letter-spacing: 0.5px;
+
+    width: max-content;
+    height: max-content;
+}
+
+.Description p{
+    position: absolute;
+    top: 6vh;
+    left: 5vw;
+
+    font-size: 18px;
+}
+
+/* message */
+
+.message{
+    position: absolute;
+    width: 25vw;
+    height: 15vh;
+
+    left: 70%;
+    top: 45vh;
+
+    border: 1.5px solid rgb(192, 192, 192);
+}
+
+.message h3{
+    position: relative;
+    top: 3vh;
+    font-size: 21px;
+    text-align: center;
+}
+
+.message button{
+    position: relative;
+    top: 6vh;
+
+    width: 15vw;
+    height: 4vh;
+    background-color: rgb(135, 219, 135);
+    color: black;
+
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* more_information */
+
+.more_information{
+    position: relative;
+    left: 70%;
+    top: -10vh;
+
+    width: 25vw;
+    height: max-content;
+
+    border: 1.5px solid rgb(192, 192, 192);
+}
+
+.more_information .more_information_div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    height: max-content;
+    width: 25vw;
+
+    padding-bottom: 5vh;
+}
+
+.more_information .more_information_div .title{
+    position: relative;
+    top: 2vh;
+
+    width: 25vw;
+    height: 5vh;
+
+    font-size: 25px;
+    text-align: center;
+
+    margin-top: 2vh;
+}
+
+.more_information .more_information_div button{
+    position: relative;
+    top: 1vh;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 8vw;
+    height: 3vh;
+
+    border-radius: 5%;
+    background-color: rgb(135, 219, 135);
+    color: black;
+}
+
+/* eliminate btn */
+
+.more_information .more_information_div .info_div .eliminate_btn{
+    position: absolute;
+    left: 80%;
+    top: 105%;
+
+    width: 5vw;
+    height: 3vh;
+
+    border-radius: 5%;
+    background-color: rgb(145, 12, 12);
+    color: white;
+}
+
+/* eliminate btn */
+
+.more_information .more_information_div .info_div{
+    position: relative;
+    top: 5vh;
+
+    width: 25vw;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-bottom: 10vh;
+}
+
+.more_information .more_information_div .info_div h3{
+    position: relative;
+    left: 2.5vw;
+
+    width: 20vw;
+    border-bottom: 2px solid rgb(135, 219, 135);
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    font-size: 18px;
+    
+}
+
+.more_information .more_information_div .info_div h3 button{
+    position: absolute;
+    left: 95%;
+    top: -5%;
+
+    height: max-content;
+    width: max-content;
+
+    background: transparent;
+    border: none;
+}
+
+.more_information .more_information_div .info_div h3 button img{
+    height: 10px;
+    width: 10px;
+
+    padding: 5px;
+}
+
+.more_information .more_information_div .info_div h3 button img:hover{
+    height: 15px;
+    width: 15px;
+}
+
+.more_information .more_information_div .info_div p{
+    position: relative;
+    left: 2.5vw;
+
+    height: 5vh;
+    width: 20vw;
+    background-color: rgb(245, 243, 243);
+}
+
+.more_information .more_information_div .info_div li{
+    text-decoration: none;
+    list-style: none;
+
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.more_information .more_information_div .info_div .container_input{
+    position: relative;
+    left: 2.5vw;
+
+    height: max-content;
+    width: max-content;
+}
+
+.more_information .more_information_div .info_div .container_input input{
+    height: 5vh;
+    width: 17vw;
+}
+
+.more_information .more_information_div .info_div .container_input button{
+    position: absolute;
+    left: 108.5%;
+    top: -2%;
+
+    height: 5.5vh;
+    width: 3vw;
+    background-color: rgb(135, 219, 135);
+}

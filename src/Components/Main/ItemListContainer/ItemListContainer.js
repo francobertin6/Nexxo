@@ -17,13 +17,17 @@ import { collection, getDocs } from "firebase/firestore"
 
 const ItemListContainer = () => {
 
+    
     const contexto = useContext(My_Context);
 
     const {Categories} = contexto;
     
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const {category} = useParams();
+    const {secondParams} = useParams();
+    let {Params} = useParams();
+
+    console.log(Params + "PARAMETRO ITEMLIST")
 
 
     const collections = collection(db, "items");
@@ -38,7 +42,7 @@ const ItemListContainer = () => {
         const firstArray = [];
         const NewArray = [];
         
-        if(category === undefined){ 
+        if(secondParams === undefined){ 
             
             /*  si no hay categoria definida se traeran todos los productos  */ 
 
@@ -75,7 +79,7 @@ const ItemListContainer = () => {
                 })
                
                 /* se filtraran los productos por categoria */
-                let filter_elements = firstArray.filter( element => element.category === category)
+                let filter_elements = firstArray.filter( element => element.category === secondParams)
                 /* se maparean esos productos retornandolos  */
                 let category_map = filter_elements.map( element => {
                         return element
@@ -96,7 +100,7 @@ const ItemListContainer = () => {
                 }, 2000)  
         }
 
-    }, [category])
+    }, [secondParams])
 
     
 
@@ -107,6 +111,11 @@ const ItemListContainer = () => {
         <div class="loader"></div>
 
         </>
+        )
+    }else if(loading === false && Params !== "index"){
+        return(
+            <>
+            </>
         )
     }else{
         return(
