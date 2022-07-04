@@ -22,6 +22,10 @@ import Seller_provider from "./context/Seller_context";
 
 import Seller_side from "./Components/Seller_side/Seller_side";
 
+// import Footer
+
+import Footer from "./Components/Footer/Footer";
+
 // import router-dom
 
 import { Routes, Route } from "react-router-dom";
@@ -35,6 +39,7 @@ const App = () => {
             <Seller_provider>
 
                     <Profile_dropdown />  
+
                <Routes>
 
                    <Route path="/main" element={ <Main /> }>
@@ -44,12 +49,16 @@ const App = () => {
                    </Route>
 
                    <Route path="/seller" element={ <Seller_side /> } >
-                       <Route path=":Params" element={ <Seller_side /> } />
+                       <Route path=":Params" element={ <Seller_side /> }>
+                            <Route path=":secondParams" element={ <Seller_side /> } />
+                        </Route>    
                    </Route>
 
                    <Route path="/" element={ <LandingPage /> } />
                    
                </Routes>
+
+                    <Footer />
 
             </Seller_provider>
             </Provider_component> 

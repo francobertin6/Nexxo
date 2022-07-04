@@ -4,7 +4,7 @@
 #Seller_dashboard{
     position: relative;
     width: 100vw;
-    height: max-content;
+    height: 100vh;
 }
 
 #Seller_dashboard #create_order{

@@ -11,6 +11,10 @@ import Seller_navbar from "./Seller_navBar/Seller_navbar";
 
 import Seller_dashboard from "./Seller_dashboard/Seller_dashboard";
 
+// import Seller_createProduct
+
+import Seller_createProduct from "./Seller_createProduct/Seller_createProduct";
+
 
 const Seller_side = () => {
 
@@ -24,11 +28,11 @@ const Seller_side = () => {
 
 }
 
-export default Seller_side;
-
 const Return_a_children = () => {
 
     const {Params} = useParams();
+
+    console.log(Params)
 
     if(Params === "dashboard"){
         return(
@@ -36,7 +40,16 @@ const Return_a_children = () => {
             <Seller_dashboard />
         </> 
         )
+    }else if(Params === "createProduct"){
+        return(
+        <>
+            <Seller_createProduct />
+        </>
+        )
     }
 
     
 }
+
+
+export default Seller_side;

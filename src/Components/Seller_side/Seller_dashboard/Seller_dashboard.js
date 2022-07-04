@@ -1,4 +1,7 @@
 
+// import react_router-dom
+import { useNavigate } from "react-router-dom";
+
 // import my_context
 import { My_Context } from "../../../context/My_context";
 import { useContext } from "react";
@@ -10,6 +13,19 @@ const Seller_dashboard = () => {
     const {User_Data} = contexto;
 
     const {UserName, Email} = User_Data;
+
+    let Navigate = useNavigate();
+
+
+    // funcion de agregar producto nuevo
+    const AgregateProduct = (e) => {
+
+        console.log(e.target);
+
+        e.preventDefault();
+        Navigate("/seller/createProduct/overview");
+
+    }
 
         return(
         <section id="Seller_dashboard">
@@ -27,7 +43,7 @@ const Seller_dashboard = () => {
                         <h5>{Email}</h5>
                     </div>
                         
-                    <button id="agregate_product">Agregar producto +</button>
+                    <button id="agregate_product" onClick={AgregateProduct}>Agregar producto +</button>
                     <button><img src="/images/menu.png" alt="Menu" /></button>
                     
                 </div>

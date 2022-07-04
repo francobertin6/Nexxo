@@ -10,6 +10,9 @@ import App from "./App.js";
 // estilos de NavBar
 import "./styles/NavBar.css";
 
+// estilos de footer
+import "./styles/Footer/Footer.css"
+
 // estilos de Main
 import "./styles/Main.css";
 
@@ -48,6 +51,10 @@ import "./styles/Seller_styles/Seller_dashboard.css";
 
 // estilos de seller_side
 import "./styles/Seller_styles/Seller_side.css"
+
+// estilos de Seller_createProduct
+import "./styles/Seller_styles/Seller_createProduct.css"
+
 
 // import estilos de toast
 import 'react-toastify/dist/ReactToastify.css';
