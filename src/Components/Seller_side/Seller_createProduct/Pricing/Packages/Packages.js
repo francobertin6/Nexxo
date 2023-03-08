@@ -1,12 +1,25 @@
 
 // import react
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+
+// import sellerContext
+
+import { Seller_Context } from "../../../../../context/Seller_context";
 
 
-const Packages = () => {
+const Packages = ({reloadFullpage}) => {
+
+    // contexto
+
+    const contexto = useContext(Seller_Context);
+
+    const { ContextPackageLockOut, isContextPackageLockOut } = contexto;
+
+    // contexto
 
     const [packageTitle, setpackageTitle] = useState("basico");
-    const [packageLockOut, setpackageLockOut] = useState(false);
+    const [packageLockOut, setpackageLockOut] = useState(ContextPackageLockOut);
+
     // loading state
     const [loading, setloading] = useState(true)
 
@@ -21,6 +34,8 @@ const Packages = () => {
         },
         title: ""
     }
+
+    // UseEffect
 
     useEffect( () => { 
 
@@ -67,8 +82,15 @@ const Packages = () => {
             setloading(false)
         }, 1);
 
-    }, [packageTitle])
+    }, [packageTitle]);
 
+    useEffect( () => {
+
+        setpackageLockOut(ContextPackageLockOut);
+
+    }, [loading])
+    
+    // UseEffect
     
     const [timeDelivery, settimeDelivery] = useState(false);
     const [timeDeliveryValue, settimeDeliveryValue] = useState({category: packageJson.time.timeDelivery})
@@ -120,11 +142,11 @@ const Packages = () => {
     // habilitar el cambio de paquete por el usuario
     const change_packageLockOut = () => {
 
-        if(packageLockOut === false){
-            setpackageLockOut(true);
+        if(ContextPackageLockOut === false){
+            isContextPackageLockOut(true);
             setloading(true);
         }else{
-            setpackageLockOut(false)
+            isContextPackageLockOut(false)
             setloading(true);
         }
 
@@ -175,13 +197,16 @@ const Packages = () => {
 
         localStorage.setItem( packageTitle, JSON.stringify(packageLocalstorage) );
 
+        reloadFullpage();
+
     }
 
     // delete_localStoragePackage
     const delete_localStoragePackage = () => {
 
         localStorage.removeItem(packageTitle);
-        window.location.reload();
+        
+        reloadFullpage();
     }
 
     // onfocus input value
@@ -232,7 +257,7 @@ const Packages = () => {
                         
     
                         <div className="checkbox">
-                            <label>Ofertar paquetes</label> <input type="checkbox" onChange={change_packageLockOut}/>
+                            <label>Ofertar paquetes</label> <input type="checkbox" checked={packageLockOut} onChange={change_packageLockOut}/>
                         </div>
     
                     </div>

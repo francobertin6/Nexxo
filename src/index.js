@@ -56,6 +56,7 @@ import "./styles/Seller_styles/Seller_side.css"
 import "./styles/Seller_styles/Seller_createProduct.css"
 
 
+
 // import estilos de toast
 import 'react-toastify/dist/ReactToastify.css';
 

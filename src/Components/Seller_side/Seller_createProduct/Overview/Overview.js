@@ -17,7 +17,7 @@ const Overview = ({Ask_for_overviewData}) => {
 
         setTimeout(() => {
             setloading(false);
-        }, 1000);
+        }, 50);
         
     },[loading])
 
@@ -102,11 +102,52 @@ const Overview = ({Ask_for_overviewData}) => {
 
             document.getElementById("input_tag").value = "";
             parentInput.appendChild(tag);
+
+            Tags.tags.push(event_name);
+
+            let obj = {
+                title: Title.title,
+                category: Category.category,
+                tags: Tags.tags
+            }
+
+            localStorage.setItem("overview", JSON.stringify(obj));
+            setloading(true);
     
         }else{
             console.log("este no es enter")
         }
 
+    }
+    // eliminate etiquetas
+    const eliminate_tags = (e) => {
+
+        console.log(etiquetas)
+
+        let parentContainer = e.target.parentNode;
+        console.log(parentContainer);
+
+        let tag = e.target.previousSibling.previousSibling.textContent;
+        console.log(tag);
+
+        let numberTag = Tags.tags.findIndex( element => element === tag);
+
+        Tags.tags.splice(numberTag, 1);
+
+        let obj = {
+            title: Title.title,
+            category: Category.category,
+            tags: Tags.tags
+        }
+
+        console.log(obj);
+
+        Ask_for_overviewData(obj)
+        localStorage.setItem("overview", JSON.stringify(obj));
+        parentContainer.remove();
+
+        setloading(true);
+        
     }
 
     // overview data function -- pasa los datos de overview a su elemento padre
@@ -210,7 +251,7 @@ const Overview = ({Ask_for_overviewData}) => {
                 { Tags.tags === null ? <></> : etiquetas.map( element => {
                     return(
                         <>
-                            <div className="tags"><label>{element}</label> <button>x</button></div>
+                            <div className="tags"><label>{element}</label> <button onClick={eliminate_tags}>x</button></div>
                         </>
                     )
                 })}

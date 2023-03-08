@@ -869,3 +869,395 @@
     color: white;
 }
 
+/* Description */
+
+
+#Description_container{
+    position: absolute;
+    top: 4.5vh;
+    left: 25vw;
+
+    background-color: rgb(210, 210, 221);
+    width: 50vw;
+    height: 60vh;
+}
+
+#Description_container .title{
+    position: absolute;
+    top: 6vh;
+    left: 2.5vw;
+
+    width: 45vw;
+}
+
+#Description_container .title h3{
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+
+#Description_container .title h6{
+    font-size: 1vw;
+}
+
+#Description_container .textarea_container{
+    width: max-content;
+    height: max-content;
+
+    position: absolute;
+    top: 20vh;
+    left: 2.5vw;   
+}
+
+#Description_container .textarea_container textarea{
+    width: 45vw;
+    height: 30vh;
+    resize: none;
+
+    font-size: 1.2vw;
+}
+
+#Description_container .btns_container{
+    position: absolute;
+    top: 52vh;
+    left: 35vw;
+
+    width: max-content;
+    height: max-content;
+}
+
+#Description_container .btns_container .continue_btn{
+    width: 10vw;
+    height: 5vh;
+    background-color: rgb(118, 118, 238);
+
+    font-size: 18px;
+    color: white;
+}
+
+/* requerimients */
+
+#Requirements_container{
+    position: relative;
+    top: -45vh;
+    left: 25vw;
+
+    background-color: rgb(255, 255, 255);
+    width: 50vw;
+    height: max-content;
+
+    border:  1px solid black;
+}
+
+/* title */
+
+#Requirements_container .title{
+    position: relative;
+    width: inherit;
+    height: 10vh;
+}
+
+#Requirements_container .title h1{
+    position: relative;
+    left: 1vw;
+    font-size: 20px;
+
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+#Requirements_container .title h3{
+    position: relative;
+    left: 1vw;
+    font-size: 12px;
+
+}
+
+#Requirements_container .addrequirements{
+    position: relative;
+    left: 1vw;
+
+    height: 5vh;
+    width: max-content;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    border: none;
+    background: none;
+
+    font-size: 18px;
+    color: rgb(118, 118, 238);
+    font-weight: 300;
+}
+
+#Requirements_container .addrequirements:hover{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* question_container */
+
+#Requirements_container .question_container{
+    position: relative;
+    left: 1vw;
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    
+    height: 12vh;
+    width: 48vw;
+
+    border: 1px solid black;
+}
+
+#Requirements_container .question_container h3{
+    position: relative;
+    left: 1vw;
+    top: 5%;
+}
+
+#Requirements_container .question_container p{
+    font-size: 12px;
+
+    position: relative;
+    left: 1vw;
+}
+
+#Requirements_container .question_container .choices{
+    position: relative;
+    top: 1.5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#Requirements_container .question_container .choices p{
+
+    position: relative;
+    left: 0vw;
+
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+#Requirements_container .question_container button{
+    position: absolute;
+    left: 95%;
+    top: 3%;
+
+    width: 2vw;
+    height: 3vh;    
+}
+
+/* requeriments_container button continue */
+#continueBtns_Requirements{
+    position: relative;
+    top: -35vh;
+    left: 65vw;
+
+    width: max-content;
+    height: max-content;
+}
+
+#continueBtns_Requirements button{
+    width: 10vw;
+    height: 5vh;
+    background-color: rgb(118, 118, 238);
+
+    font-size: 18px;
+    color: white;
+}
+
+/* Create_questions */
+
+.Question_container{
+    width: inherit;
+    height: max-content;
+}
+
+.Question_container .Question{
+    width: inherit;
+    height: 35vh;
+
+}
+
+.Question_container .Question h4{
+    font-size: 21px;
+    position: relative;
+    top: 2.5vh;
+    left: 2.5vw;
+}
+
+.Question_container .Question textarea{
+    position: relative;
+    top: 5vh;
+    left: 2.5vw;
+
+    width: 45vw;
+    height: 25vh;
+    resize: none;
+
+    font-size: 21px;
+}
+
+.Question_container .form_container{
+    position: relative;
+    width: inherit;
+    height: 10vh;
+}
+
+.Question_container .form_container h4{
+    font-size: 21px;
+    position: relative;
+    left: 2.5vw;
+    margin-bottom: 2vh;
+}
+
+.Question_container .form_container select{
+    width: 15vw;
+    height: 3vh;
+
+    position: relative;
+    left: 2.5vw;
+}
+
+.Question_container .btns_container{
+    width: inherit;
+    height: 15vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-content: center;
+}
+
+.Question_container .btns_container button{
+    height: 3vh;
+    width: 5vw;
+
+    position: relative;
+    left: 1.5vw;
+    top: 8vh;
+
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.Question_container .multiple_choise_container{
+    height: max-content;
+    width: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Question_container .multiple_choise_container input{
+    height: 5vh;
+    width: 45vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    position: relative;
+    left: 2.5vw;
+}
+
+.Question_container .multiple_choise_container button{
+    position: relative;
+    left: 2.5vw;
+
+    height: 5vh;
+    width: 10vw;
+
+    background: none;
+    border: 3px solid rgb(118, 118, 238);
+}
+
+/* gallery */
+
+#Gallery_container{
+    position: relative;
+    left: 25vw;
+    top: -45vh;
+
+    width: 50vw;
+    height: max-content;
+
+    border: 1px solid black;
+}
+
+#Gallery_container .title{
+    width: inherit;
+    height: 10vh;
+
+    position: relative;
+}
+
+#Gallery_container .title h1{
+    position: absolute;
+    left: 2.5vw;
+    top: 50%;
+
+    transform: translate(0, -50%);
+    font-size: 2vh;
+}
+
+#Gallery_container .Mediacontainer{
+    width: 45vw;
+    height: 30vh;
+
+    position: relative;
+    left: 2.5vw;
+}
+
+#Gallery_container .Mediacontainer .addContainer{
+    position: relative;
+    top: 2.5vh;
+
+    width: 45vw;
+    height: 20vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#Gallery_container .Mediacontainer .addContainer .addMedia{
+    width: 12vw;
+    height: 20vh;
+
+    border: 2px solid black;
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#Gallery_container .Mediacontainer .addContainer .addMedia .addMedialogo{
+    width: 5vw;
+    height: 7vh;
+
+    position: relative;
+    top: -3vh;
+}
+
+#Gallery_container .Mediacontainer .addContainer .addMedia p{
+    font-size: 0.8vw;
+
+    position: relative;
+    top: -2vh;
+}
+
+#Gallery_container .Mediacontainer .addContainer .addMedia button{
+    width: 7vw;
+    height: 3vh;
+}

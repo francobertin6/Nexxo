@@ -5,7 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import { Seller_Context } from "../../../../../context/Seller_context";
 
 
-const ExtraService = () => {
+const ExtraService = ({reloadFullpage}) => {
 
     const contexto = useContext(Seller_Context);
 
@@ -13,17 +13,32 @@ const ExtraService = () => {
 
     const [loading, setloading] = useState(true);
 
-    const [extraService, setextraService] = useState(false);
+    // extraService localStorage
+
+    var extraFast = JSON.parse(localStorage.getItem("extraFast"));
+    if( extraFast === true){
+        extraFast = false;
+    }else if( extraFast === false){
+        extraFast = true;
+    }else{
+        extraFast = false;
+    }
+    
+    const [extraService] = useState(extraFast);
+
+    // extraService localStorage
 
     const [addService, setaddService] = useState();
 
     const serviceChecked = () => {
         if(extraService === false){
-            setextraService(true);
             localStorage.setItem("extraFast", true);
-        }else{
-            setextraService(false)
-            localStorage.removeItem("extraFast");
+            reloadFullpage();
+            setloading(true);
+        }else if(extraService === true){
+            localStorage.setItem("extraFast", false);
+            reloadFullpage();
+            setloading(true);
         }
     }
 
@@ -143,6 +158,8 @@ const ExtraService = () => {
         
         console.log(service);
         getExtraservices(service); //cambiar la ruta de guardado de localstorage a context
+
+        reloadFullpage();
         setloading(true);
     }
 
@@ -158,7 +175,9 @@ const ExtraService = () => {
 
         localStorage.setItem("extraServices", JSON.stringify(addService));
 
+        reloadFullpage();
         setloading(true);
+
 
     }
 
@@ -182,7 +201,6 @@ const ExtraService = () => {
         setTimeout(() => {
             setloading(false)
         }, 500);
-
         
     }, [loading])
 

@@ -11,11 +11,32 @@ const Seller_provider = ({children}) => {
 
     const [SellerId, setSellerId] = useState();
     const [extraServices, setextraServices] = useState(JSON.parse(localStorage.getItem("extraServices")));
+    // packageLockOut de /pricing/packages
+
+    var packageLockOutValue;
+    if(JSON.parse(localStorage.getItem("packageLockOut")) === null){
+        packageLockOutValue = false;
+    }else{
+        packageLockOutValue = JSON.parse(localStorage.getItem("packageLockOut"));
+    }
+
+    const [ContextPackageLockOut, setContextPackageLockOut] = useState(packageLockOutValue);
 
     // pregunta si es una vendedor o no, primer consulta en el main
 
     const Is_a_sellerId = (value) => {
         setSellerId(value);
+    }
+
+    // pregunta si packageLockOut es false o true
+
+    const isContextPackageLockOut = (value) => {
+
+        console.log("isContextPackageLockOut = ", ContextPackageLockOut);
+
+        setContextPackageLockOut(value);
+        localStorage.setItem("packageLockOut", JSON.stringify(value))
+
     }
 
     // pregunta extraServices
@@ -36,7 +57,9 @@ const Seller_provider = ({children}) => {
         SellerId,
         setSellerId,
         extraServices,
-        getExtraservices
+        getExtraservices,
+        ContextPackageLockOut,
+        isContextPackageLockOut
     };
 
     return(
